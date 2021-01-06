@@ -12,100 +12,91 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <title>NuCamp: A Better Way To Camp</title>
+    <title>Sunshine Dental</title>
 </head>
 
 <body>
 
-    <header class="jumbotron jumbotron-fluid"> <!--jumbotron-fluid is added so the corners of the background of the header are not rounded but straight-->
+    <header class="jumbotron jumbotron-fluid">
         <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-3 col-md-2 align-self-center">   <!--adding this column to hold the image-->
-                    <img src="img/logo.png" class="img-fluid" />      <!--img-fluid class adds padding, border and assures that max-width is 100% of the viewport and height is set to auto so it will scale according to the width-->
-                 </div>
-                <div class="col">
-                    <h1>NuCamp</h1>
-                    <h2>a better way to camp</h2>
-                </div>
-                 <!--Creating a button link in the navbar to take us to the reservation form-->
-                <div class="col-md-4 col-xl-2 mt-4">
-                        <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>     <!--the data-placement lets us specify where the tooltip will appear, the title-holds the text inside the tooltip, but if we have HTML tags inside that text they will appear as well, therefore we use data-html="true" to avoid those tags showing up in the tooltip-->
-                        <!--<a href="#reserveForm"class="text-nowrap" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>-->       <!--text-nowrap will assure the Reserve and Campsite remain on one line.If we want them to appear one under the other we can ommit this class-->
-                            <!--<button class="btn btn-info btn-lg">Reserve Campsite</button>
-                        </a>-->
-                </div>
 
+            <div class="row">
+                <div class="col text-center text-sm-left">
+                    <a role="button" class="btn  btn-link btn-info text-white" href="tel: +12065551234"><i class="fa fa-phone fa-lg text-primary"></i> 1-206-555-1234</a> 
+                </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <img src="img/dentallogo-02.png" class="mx-auto d-block" style="width: 200px"/> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <h2>"creating smiles with a gentle touch"</h2>
+                </div>
+            </div>
+        
+                
+                <div class="row">
+                    <div class="col centerHeading">
+                        <span class="navbar-text">
+                            <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#appointmentModal">
+                                REQUEST APPOINTMENT
+                            </a>
+                        </span>
+                    </div>
+                </div>  
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">  <!--First always add navbar and then addl classes-here navbar-expand-sm will expand the navbar horizontally on viewports sizes sm and up but on xs viewports the navbar items will stack on top of one another. 
-                    The navbar-dark is added so it will cause the menu items to become lighter against the dark background.Sticky-top will make the navbar still visible on the top while we are scrolling down the page-->
-       
-        <div class="container">    <!--This is used so padding can be added around the text in the navbar-->
-            
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>    <!--the img is wrapped as a link because it is common that the website's logo when clicked should take you to the home page-->
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-               <span class="navbar-toggler-icon"></span>
-           </button>
-                <!--The above code for the button should always be used when we want to create the "hamburger style" button that will hide the navbar and it's
-                    items on smaller viewports. In this case the breakpoint where this will happend is provided by the navbar-expand-sm class in the start <nav> tag. 
-                    It should be followed by wrapping the <ul> list of the navbar in a <div> element with the listed classes. Notice that
-                    the value of the data-target attribute of the button must match the value of the id attribute in the <div> without the # in front. 
-                     All the data attributes listed are HTML5 attributes. The ml-auto class is a bootstrap class used to move the button to right by using the margin-left spacing utility set to auto-->
-
-           <div class="collapse navbar-collapse" id="nucampNavbar">
-              <ul class="navbar-nav">    <!--navbar-nav class is added so we can add links to the menu items-->
-                  <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>    <!--nav-item should always be added to the <li> items since we will be adding links; 
-                     active is added to indicate that we are currently on the Home page. The <i> tag is used to add the font awesome classes-fa-stands for font awesome, then fa-home gives us the home icon and fa-lg-makes it larger-->
-                  <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li>  <!--nav-link should always be added the the <a> tags-->
-                  <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
-              </ul>
-
-                 <!--Setting up the button that will open the modal-->
-                 <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
-                        <i class="fa fa-sign-in"></i> Login
-                    </a>
-                </span>
-
-          </div>
-       </div>
-    </nav>
-
-    <!--Setting up the modal itself. It can go anywhere in the body. There is no modal HTML tag so we use div tags-->
-    <div id="loginModal" class="modal fade" role="dialog">                    <!--the value of the id matches the value of the data-target attribute of the button that opens the modal; class="fade" gives it a subtle fade effect when it closes or opens-->
-        <div class="modal-dialog" role="document">
+    <!--Setting up a modal for Request Appointment button-->   
+    <div id="appointmentModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Login</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>      <!--Here we are creating a little "x" button that can close the login popup/modal. The "&times; is an HTML character entity that represents the little "x"-->
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Request Appointment</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="container-fluid">   <!--Setting up a container for the form so we can set up rows and cols for a bottstrap grid-->
+                    <div class="container-fluid">
                         <form>
-                            <div class="form-row">
-                                <div class="form-group col-12">
-                                    <label class="sr-only" for="loginEmail">Email address</label>     <!--class="sr-only" makes the label visible to Screen Readers only-->
-                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email"/>
-                                </div>
-                                <div class="form-group col-12">
-                                    <label class="sr-only" for="loginPassword">Password</label>
-                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password"/>
-                                </div>
-                                <div class="col">            <!--Here we'll set up another column for a Remember me box to be checked by the user if she wants the computer to remember the login info-->
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox"/>
-                                        <label class="form-check-label">Remember me</label>
-                                    </div>
+                            <div class="form-group row"> 
+                                <label for="firstName" class="col-md-2 col-form-label">First Name</label> 
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" /> 
                                 </div>
                             </div>
-                            <div class="form-row">         <!--Setting up another form row to hold the Cancel and Submit buttons-->
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-
+                            <div class="form-group row">
+                                <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="areaCode" class="col-md-2 col-form-label">Contact Tel.</label>
+                                <div class="col-5 col-md-3">
+                                    <input type="tel" class="form-control" id="areaCode" name="areaCode" placeholder="Area code" />
+                                </div>
+                                <div class="col-7">
+                                    <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-md-2 col-form-label">Email</label>
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="apptType" class="col-md-2 col-form-label">Type of appointment</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" id="apptType" name="feedback" rows="8" placeholder="Describe briefly: toothache, checkup and cleaning etc."></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="offset-md-2 col-md-10">
+                                    <button type="submit" class="btn btn-info">Submit</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -114,161 +105,155 @@
         </div>
     </div>
 
-    <div class="container">
+
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#sunshineDentalNavbar">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+
+           <div class="collapse navbar-collapse" id="sunshineDentalNavbar">
+              <ul class="navbar-nav justify-content-center d-flex w-100">
+                  <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-users fa-lg"></i> Our Team</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-info-circle fa-lg"></i> Services</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-hand-o-right fa-lg"></i> New Patients</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-info fa-lg"></i> Insurance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact Us</a></li>
+              </ul>
+
+          </div>
+       </div>
+    </nav>
+
+    <!--Setting up background image with message-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col px-0 d-flex align-items-end justify-content-center" id="toothbrushBackground" style="background-image: url('img/toothbrushBackground.jpg');">
+                    <h2 id="txtOnBackground">A better life. A beautiful smile.</h2>
+            </div>
+        </div>
+    </div>
+
+            <div id="beforeCarousel">
+                <p>Take a peak at our Happy Smiles Gallery bellow:</p>
+            </div>
+        
         <!--Creating the carousel-->
+        <div class="container">
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
-                <div id="homeCarousel" class="carousel slide" data-ride="carousel">       <!--the class slide will make the transition bewteen the slides smoother, the data-ride="carousel" will make the carousel start as soon as the page loads-->
-                    <!--Setting up the carousel indicators with the <ol> list-->
+                <div id="homeCarousel" class="carousel slide d-flex justify-content-around align-items-center" data-ride="carousel">   
                     <ol class="carousel-indicators">
-                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>       <!--data-slide-to will indicate wich slide the user is currently on. Starts with 0 and goes up-->
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>      
                         <li data-target="#homeCarousel" data-slide-to="1"></li>
                         <li data-target="#homeCarousel" data-slide-to="2"></li>
+                        <li data-target="#homeCarousel" data-slide-to="3"></li>
                     </ol>
-                    <div class="carousel-inner">       <!--this div container with carousel-inner class will hold the carousel items-->
-                        <div class="carousel-item active">     <!--the active class on this carousel item will make it the first item to show up upon page load-->
-                            <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground" />    <!--the d-block and w-100(width-100%) classes are bootstrap's display and sizing utility classes used to prevent the browser from taking over the images and using it's own positioning and sizing-->
-                            <!--Adding captions to each carousel item-->
-                            <div class="carousel-caption">
-                                <h3>Breadcrumb Trail Campground</h3>
-                                <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path, hike-in-only campground.</p>      <!--d-none will make this text invisible on XS viewports; d-sm-block-will make it appear ot viewports sized SM and up-->
-                            </div>
+                    <!--The carousel prev control was moved before the carousel-inner so the carousel controls will be otside of the inner image and they will be responsive-->
+                    <a class="carousel-control-prev align-self-stretch" href="#homeCarousel" role="button" data-slide="prev">   
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Previuous</span>    
+                   </a>
+
+                    <div class="carousel-inner">     
+                        <div class="carousel-item active">   
+                            <img class="d-block w-100" src="img/Before-After-1.jpg" alt="Before and after 1" />
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground" />
-                            <div class="carousel-caption">
-                                <h3>React Lake Campground</h3>
-                                <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-                            </div>
+                            <img class="d-block w-100 " src="img/Before-After-2.jpg" alt="Before and after 2" />
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" />
-                            <div class="carousel-caption">
-                                <h3>Chrome River Campground</h3>
-                                <p>Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River.</p>
-                            </div>
+                            <img class="d-block w-100" src="img/Before-After-3.jpg" alt="Before and after 3" />
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/Before-After-4.jpg" alt="Before and after 4"/>
                         </div>
                     </div>
-                    <!--Adding carousel-controls-->
-                    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="sr-only">Previuous</span>    <!--this is for screan readers only and it will not show up ina the browser-->
-                   </a>
-                   <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                    
+                   <a class="carousel-control-next align-self-stretch" href="#homeCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                    </a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="row row-content align-items-center">  <!--align-items-center class is used on rows and it will center all columns inside a row vertically-->
-            <div class="col-sm-4 order-sm-last col-md-3">
-                <h2 class="text-sm-right">Discover & Review</h2>   <!--text-sm-right assures that on small and up screens the text will still align to the right-->
+        <!--Card deck-doctors-->
+        <div class="card-deck container-fluid">
+            <div class="card">
+                <h3 class="card-header bg-info text-white">Dr Jane Doe</h3>
+                <div class="card-body">
+                    <img class="card-img-top d-flex" src="img/New-Female-Dentist.jpg" alt="Dr Jane Doe"/>
+                    <h4 class="card-title">Lorem Ipsum</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam phasellus vestibulum lorem sed. Massa tempor nec feugiat nisl pretium fusce id velit. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. In arcu cursus euismod quis viverra nibh. Sit amet justo donec enim diam.</p>
+                </div>
             </div>
-            <div class="col">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />   <!--d-flex class is there as bootstrap recommends it to deal with a bug in IE10 and up regarding media objects; mr-3 class gives margin-right and the img-thumbnail-gives the img a border-->
-                    <div class="media-body align-self-center">
-                        <h3>Our Campsites</h3>
-                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
-                    </div>
-                 </div>
+            <div class="card">
+                <h3 class="card-header bg-info text-white">Dr John Doe</h3>
+                <div class="card-body">
+                    <img class="card-img-top d-flex" src="img/New-Male-Dentist.jpg" alt="Dr John Doe"/>
+                    <h4 class="card-title">Lorem Ipsum</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam phasellus vestibulum lorem sed. Massa tempor nec feugiat nisl pretium fusce id velit. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. In arcu cursus euismod quis viverra nibh. Sit amet justo donec enim diam.</p>
+                </div>
             </div>
         </div>
 
-        <div class="row row-content align-items-center">
-            <div class="col-sm-4 col-md-3">
-                <h2>Featured Campsites</h2>
-            </div>
-            <!--Adding React Lake Campground img-thumbnail-->
-            <div class="col">
-                <div class="media">
-                   <div class="media-body align-self-center">
-                        <h3>React Lake Campground</h3>
-                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-                   </div>
-                        <img class="d-flex ml-3 img-thumbnail"  src="img/react-lake-thumb.jpg" alt="React Lake"/>     <!--Had to position the img tag after the media-body closing div so the img will appear to the right of the text-->
-                   </div>
-                </div>
+     <!--Logos and links to  the Services page-->
+    <div class="container-fluid bottomLogos">
+       <div class="row row-content align-items-center">
+           <div class="col-sm-4 text-center">
+               <img src="img/General-Dentistry-logo.png" alt="General Dentistry"/><br/>
+               <a class="btn btn-lg btn-info" href="#">General Dentistry</a>
            </div>
-
-        <div class="row row-content align-items-center">
-            <div class="col-sm-4 order-sm-last col-md-3">
-                <h2 class="text-sm-right">Our Community Partners</h2>
+           <div class="col-sm-4 text-center">
+               <img src="img/Cosmetic-Dentistry-logo.png" alt="Cosmetic Dentistry"/><br/>
+               <a class="btn btn-lg btn-info" href="#">Cosmetic Dentistry</a>
             </div>
-            <div class="col">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
-                    <div class="media-body align-self-center">
-                        <h3>Bootstrap Outfitters</h3>
-                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-          <!--Creating Reservation Form-->
-         <div class="row row-content align-items-center">
-                 <div class="col-sm-6 mx-auto">    <!--mx-auto is used to horizontally center this div-->
-                     <div class="card">
-                         <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
-                         <div class="card-body">
-                             <form id="reserveForm">
-                                 <div class="form-group row">
-                                     <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
-                                     <div class="col">
-                                         <select name="numCampers" id="numCampers" class="form-control">
-                                             <option>Select</option>
-                                             <option value="1">1</option>
-                                             <option value="2">2</option>
-                                             <option value="3">3</option>
-                                             <option value="4">4</option>
-                                             <option value="5">5</option>
-                                             <option value="6">6</option>
-                                         </select>
-                                     </div>
-                                 </div>
-                                 <div class="form-group row">
-                                    <label for="date" class="col-sm-6 col-form-label">Date</label>
-                                    <div class="col-sm-6">
-                                        <input type="date" id="date" name="date" placeholder="Date" class="form-control"/>
-                                    </div>
-                                 </div>
-                                 <div class="form-group row">
-                                    <div class="col">
-                                        <button type="submit" class="btn btn-primary">Search</button>
-                                    </div>
-                                 </div>
-                             </form>
-                         </div>
-                     </div>
-                 </div>
-         </div>
+            <div class="col-sm-4 text-center">
+               <img src="img/Dental-Eemergency-logo.png" alt="Dental Emergency"/><br/>
+               <a class="btn btn-lg btn-info" href="#">Dental Emergencies</a>
+           </div>
+           
+       </div> 
     </div>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-2 offset-1">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Sites</a></li>
-                        <li><a href="contactus.html">Contact</a></li>
+        <div class = "card-deck container-fluid">
+            <div class="card bg-secondary text-white">
+                <div class="card-body">
+                    <h3 class="card-title footerHeadings">Bussines Hours</h3>
+                    <ul class=" card-text list-unstyled">
+                        <li style="padding-bottom: 10px">Monday: 7am - 5pm</li>
+                        <li style="padding-bottom: 10px">Tuesday: 10am - 7pm</li>
+                        <li style="padding-bottom: 10px">Wednesday: 10am - 7pm</li>
+                        <li style="padding-bottom: 10px">Thursday: 9am - 6pm</li>
+                        <li>Friday: 8am - 4pm</li>
                     </ul>
-               </div>
-               <div class="col-6 col-sm-5 text-center">   <!--text-center will assure that the text is centered on all size viewports as we haven't specified a size-->
-                    <h5>Social</h5>
-                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>   <!--Instead of havong a clickable text as a link we can use the font awesome icons-->
+                </div>
+            </div>
+            <div class = "card bg-secondary text-white">
+                <div class = "card-body">
+                    <h3 class="card-title footerHeadings">Contact</h3>
+                    <address>
+                        123 Sunny Blvd<br/>
+                        Sunny Place, FL 12345
+                    </address>
+                    <i class="fa fa-phone fa-lg text-white"> 1-206-555-1234</i>
+                    <a role="button" class="btn btn-link text-white" href="none@none.com"><i class="fa fa-envelope fa-lg text-white"></i> none@none.com</a>
+                    <h3 id="social" class="footerHeadings">Social</h3>
                     <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-               </div>
-               <div class="col-sm-4 text-center">
-                <a role="button" class="btn btn-link" href="tel: +12065551234"><i class="fa fa-phone fa-lg text-primary"></i> 1-206-555-1234</a><br/>    <!--Instead of having a text "tel:" in front of the tel, we can add a font awesome telephone icon. We can change the style of these icons if we want with custom css-->
-                <a role="button" class="btn btn-link" href="mailto:campsite@nucamp.co"><i class="fa fa-envelope fa-lg text-primary"></i> campsites@nucamp.co</a>
-               </div>
+                    <a class="btn btn-social-icon btn-yelp" href="http://yelp.com/"><i class="fa fa-yelp"></i></a>
+                </div>
+            </div>
+            <div class = "card bg-secondary text-white">
+                <div class = "card-body">
+                    <h3 class="card-title" style="text-decoration: underline;">Join Our Team</h3>
+                    <p>Enjoy a rewarding career and great benefits.</p>
+                    <p>Email us your resume at: </p>
+                    <a role="button" class="btn btn-link text-white" href="none@none.com"><i class="fa fa-envelope fa-lg text-white"></i> none@none.com</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -277,11 +262,11 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script>
+    <!--<script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
-    </script>
+    </script>-->
 
 </body>
 

@@ -1,7 +1,7 @@
 {
-  "name": "nucampsite",
+  "name": "sunshinedental",
   "version": "1.0.0",
-  "description": "This is a website for the fictional campsites review site Nucamp",
+  "description": "This is a website for the fictional dental office called Sunshine Dental",
   "main": "index.html",
   "scripts": {
     "lite": "lite-server",
