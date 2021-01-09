@@ -11,14 +11,12 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- endbuild -->
+     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 
     <title>Sunshine Dental</title>
 </head>
-
 <body>
-
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
 
@@ -50,8 +48,35 @@
                 </div>  
         </div>
     </header>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#sunshineDentalNavbar">
+               <span class="navbar-toggler-icon"></span>
+           </button>
 
-    <!--Setting up a modal for Request Appointment button-->   
+           <div class="collapse navbar-collapse" id="sunshineDentalNavbar">
+              <ul class="navbar-nav justify-content-center d-flex w-100">
+                  <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="ourteam.html"><i class="fa fa-users fa-lg"></i> Our Team</a></li>
+                  <li class="nav-item"><a class="nav-link" href="services.html"><i class="fa fa-info-circle fa-lg"></i> Services</a></li>
+                  <li class="nav-item"><a class="nav-link" href="newpatients.html"><i class="fa fa-hand-o-right fa-lg"></i> New Patients</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-info fa-lg"></i> Insurance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact Us</a></li>
+              </ul>
+
+          </div>
+       </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <ol class="breadcrumb mb-0">    
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Insurance</li>
+                </ol>
+            </div>
+        </div>
+    </div>
     <div id="appointmentModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -107,124 +132,92 @@
         </div>
     </div>
 
-
-    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#sunshineDentalNavbar">
-               <span class="navbar-toggler-icon"></span>
-           </button>
-
-           <div class="collapse navbar-collapse" id="sunshineDentalNavbar">
-              <ul class="navbar-nav justify-content-center d-flex w-100">
-                  <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="ourteam.html"><i class="fa fa-users fa-lg"></i> Our Team</a></li>
-                  <li class="nav-item"><a class="nav-link" href="services.html"><i class="fa fa-info-circle fa-lg"></i> Services</a></li>
-                  <li class="nav-item"><a class="nav-link" href="newpatients.html"><i class="fa fa-hand-o-right fa-lg"></i> New Patients</a></li>
-                  <li class="nav-item"><a class="nav-link" href="insurance.html"><i class="fa fa-info fa-lg"></i> Insurance</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact Us</a></li>
-              </ul>
-
-          </div>
-       </div>
-    </nav>
-
-    <!--Setting up background image with message-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col px-0 d-flex align-items-end justify-content-center" id="toothbrushBackground" style="background-image: url('img/toothbrushes.jpg');">
-                    <h2 id="txtOnBackground">A better life. A beautiful smile.</h2>
-            </div>
-        </div>
+    <div class="apptTeam">
+        <p>WE ARE IN NETWORK WITH MAJORITY OF PPO INSURANCE PROVIDERS</p>
     </div>
-
-            <div id="beforeCarousel">
-                <p>Take a peak at our Happy Smiles Gallery bellow:</p>
-            </div>
-        
-        <!--Creating the carousel-->
-        <div class="container">
+    <div class="container-fluid insBackgr">
         <div class="row row-content">
-            <div class="col-md-8 mx-auto">
-                <div id="homeCarousel" class="carousel slide d-flex justify-content-around align-items-center" data-ride="carousel">   
-                    <ol class="carousel-indicators">
-                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>      
-                        <li data-target="#homeCarousel" data-slide-to="1"></li>
-                        <li data-target="#homeCarousel" data-slide-to="2"></li>
-                        <li data-target="#homeCarousel" data-slide-to="3"></li>
-                        <button class="btn btn-danger btn-sm" id="carouselButton">
-                            <i class="fa fa-pause"></i>
-                        </button>
-                    </ol>
-                    <!--The carousel prev control was moved before the carousel-inner so the carousel controls will be otside of the inner image and they will be responsive-->
-                    <a class="carousel-control-prev align-self-stretch" href="#homeCarousel" role="button" data-slide="prev">   
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="sr-only">Previuous</span>    
-                   </a>
+            <div class="col">
+                <p class="fontP footerHeadings">List of accepted insurance plans</p>
+                <ul>
+                    <li>Delta Dental PPO</li>
+                    <li>Cigna PPO</li>
+                    <li>Humana PPO</li>
+                    <li>Guardian PPO</li>
+                    <li>Blue Cross Blue Shield PPO</li>
+                    <li>Aetna PPO</li>
+                    <li>MetLife PPO</li>
+                    <li>Ameritas PPO</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p class="fontP">If you do not see your insurance on the list, please call our friendly staff. They have the most up to date information.</p>
+                <a role="button" class="btn  btn-link btn-info text-white" href="tel: +12065551234"><i class="fa fa-phone fa-lg text-white"></i> 1-206-555-1234</a> 
+            </div>
+        </div>
+    </div>
 
-                    <div class="carousel-inner">     
-                        <div class="carousel-item active">   
-                            <img class="d-block w-100" src="img/Before-After-1.jpg" alt="Before and after 1" />
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100 " src="img/Before-After-2.jpg" alt="Before and after 2" />
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/Before-After-3.jpg" alt="Before and after 3" />
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/Before-After-4.jpg" alt="Before and after 4"/>
-                        </div>
+    <div class="apptTeam">
+        <p>REQUEST AN APPOINTMENT TODAY</p>
+        <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#appointmentModal2">
+            REQUEST ONLINE
+        </a>
+    </div>
+    <div id="appointmentModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Request Appointment</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-group row"> 
+                                <label for="firstName2" class="col-md-2 col-form-label">First Name</label> 
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="firstName2" name="firstName" placeholder="First Name" /> 
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lastName2" class="col-md-2 col-form-label">Last Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="lastName2" name="lastName" placeholder="Last Name" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="areaCode2" class="col-md-2 col-form-label">Contact Tel.</label>
+                                <div class="col-5 col-md-3">
+                                    <input type="tel" class="form-control" id="areaCode2" name="areaCode" placeholder="Area code" />
+                                </div>
+                                <div class="col-7">
+                                    <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email2" class="col-md-2 col-form-label">Email</label>
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" id="email2" name="email" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="apptType2" class="col-md-2 col-form-label">Type of appointment</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" id="apptType2" name="feedback" rows="8" placeholder="Describe briefly: toothache, checkup and cleaning etc."></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="offset-md-2 col-md-10">
+                                    <button type="submit" class="btn btn-info">Submit</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    
-                   <a class="carousel-control-next align-self-stretch" href="#homeCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only">Next</span>
-                   </a>
-                 
                 </div>
             </div>
         </div>
     </div>
-
-        <!--Card deck-doctors-->
-        <div class="card-deck container-fluid">
-            <div class="card">
-                <h3 class="card-header bg-info text-white">Dr Jane Doe</h3>
-                <div class="card-body">
-                    <img class="card-img-top d-flex" src="img/New-Female-Dentist.jpg" alt="Dr Jane Doe"/>
-                    <h4 class="card-title">Lorem Ipsum</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam phasellus vestibulum lorem sed. Massa tempor nec feugiat nisl pretium fusce id velit. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. In arcu cursus euismod quis viverra nibh. Sit amet justo donec enim diam.</p>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="card-header bg-info text-white">Dr John Doe</h3>
-                <div class="card-body">
-                    <img class="card-img-top d-flex" src="img/New-Male-Dentist.jpg" alt="Dr John Doe"/>
-                    <h4 class="card-title">Lorem Ipsum</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam phasellus vestibulum lorem sed. Massa tempor nec feugiat nisl pretium fusce id velit. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. In arcu cursus euismod quis viverra nibh. Sit amet justo donec enim diam.</p>
-                </div>
-            </div>
-        </div>
-
-     <!--Logos and links to  the Services page-->
-    <div class="container-fluid bottomLogos">
-       <div class="row row-content align-items-center">
-           <div class="col-sm-4 text-center">
-               <img src="img/General-Dentistry-logo.png" alt="General Dentistry"/><br/>
-               <a class="btn btn-lg btn-info" href="services.html">General Dentistry</a>
-           </div>
-           <div class="col-sm-4 text-center">
-               <img src="img/Cosmetic-Dentistry-logo.png" alt="Cosmetic Dentistry"/><br/>
-               <a class="btn btn-lg btn-info" href="services.html">Cosmetic Dentistry</a>
-            </div>
-            <div class="col-sm-4 text-center">
-               <img src="img/Dental-Eemergency-logo.png" alt="Dental Emergency"/><br/>
-               <a class="btn btn-lg btn-info" href="services.html">Dental Emergencies</a>
-           </div>
-           
-       </div> 
-    </div>
-
+    
     <footer class="site-footer">
         <div class = "card-deck container-fluid">
             <div class="card bg-secondary text-white">
@@ -255,7 +248,7 @@
             </div>
             <div class = "card bg-secondary text-white">
                 <div class = "card-body">
-                    <h3 class="card-title" style="text-decoration: underline;">Join Our Team</h3>
+                    <h3 class="card-title footerHeadings">Join Our Team</h3>
                     <p>Enjoy a rewarding career and great benefits.</p>
                     <p>Email us your resume at: </p>
                     <a role="button" class="btn btn-link text-white" href="none@none.com"><i class="fa fa-envelope fa-lg text-white"></i> none@none.com</a>
@@ -263,13 +256,15 @@
             </div>
         </div>
     </footer>
-    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <!-- build:js js/main.js -->
+
+     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+      <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <!-- endbuild -->
 </body>
+
 
 </html>

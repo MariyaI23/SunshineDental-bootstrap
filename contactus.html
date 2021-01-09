@@ -1,58 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
-
-    <title>NuCamp: A Better Way To Camp</title>
-</head>
+        <!-- build:css css/main.css -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <!-- Additional CSS must be placed after Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-- endbuild -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    
+        <title>Sunshine Dental</title>
+    </head>
 
 <body>
 
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
+
             <div class="row">
-                <div class="col centerHeading">
-                    <a href="index.html"><img src="img/logo.png" class="img-fluid" /></a>
-                    <h1>NuCamp</h1>
-                    <h2>a better way to camp</h2>
+                <div class="col text-center text-sm-left">
+                    <a role="button" class="btn  btn-link btn-info text-white" href="tel: +12065551234"><i class="fa fa-phone fa-lg text-white"></i> 1-206-555-1234</a> 
                 </div>
-                
             </div>
+            <div class="row">
+                <div class="col">
+                    <a href="#"><img src="img/dentallogo-02.png" class="mx-auto d-block" style="width: 200px"/></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <h2>"creating smiles with a gentle touch"</h2>
+                </div>
+            </div>
+        
+                
+                <div class="row">
+                    <div class="col centerHeading">
+                        <span class="navbar-text">
+                            <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#appointmentModal">
+                                REQUEST APPOINTMENT
+                            </a>
+                        </span>
+                    </div>
+                </div>  
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-        <div class="container">
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#sunshineDentalNavbar">
+               <span class="navbar-toggler-icon"></span>
+           </button>
 
-            <a class="navbar-brand" id="littleLogo" href="index.html"><img src="img/logo.png" height="30" width="30" /></a>
+           <div class="collapse navbar-collapse" id="sunshineDentalNavbar">
+              <ul class="navbar-nav justify-content-center d-flex w-100">
+                  <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="ourteam.html"><i class="fa fa-users fa-lg"></i> Our Team</a></li>
+                  <li class="nav-item"><a class="nav-link" href="services.html"><i class="fa fa-info-circle fa-lg"></i> Services</a></li>
+                  <li class="nav-item"><a class="nav-link" href="newpatients.html"><i class="fa fa-hand-o-right fa-lg"></i> New Patients</a></li>
+                  <li class="nav-item"><a class="nav-link" href="insurance.html"><i class="fa fa-info fa-lg"></i> Insurance</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Contact Us</a></li>
+              </ul>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse topnav-centered" id="nucampNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
-                </ul>
-            </div>
-        </div>
+          </div>
+       </div>
     </nav>
 
-<div style="background-image: url(img/Background-img1.jpg); background-repeat: no-repeat; background-size:cover; background-attachment: fixed;">
+
 
     <div class="container">
         <div class="row">
@@ -61,38 +79,53 @@
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active">Contact</li>
                 </ol>
-                <h2>Contact Us</h2>
-                <hr />
             </div>
         </div>
+    </div>    
 
-        <div class="row row-content align-items-center">
-            <div class="col-sm-4">
-                <h5>Our Address</h5>
-                <address>
-                    1 Nucamp Way<br />
-                    Seattle, WA 98001<br />
-                    U.S.A.
-                </address>
-            </div>
-            <div class="col">
-				<a role="button" class="btn btn-link btn-info text-white" href="tel: +12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br/><br/>   <!--Surrounding the <i> tag in an <a> tag with the css bootstrap button class btn-link will create a button which is a link
-                                                                                                                                                              The role attribute is an HTM attribute helpfull for screen readers. The href attribute will link to the actual client website's tel and the computer or our phone will try to call it-->
-            	<a role="button" class="btn btn-link btn-info text-white" href="mailto:campsite@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+    <div class="card-deck container-fluid">
+        <div class="card cardsContact">
+            <h3 class="card-header bg-info text-white">Our Location <i class="fa fa-map-marker" aria-hidden="true"></i></h3>
+            <div class="card-body">
+                <div id="map-container-google-8" class="z-depth-1-half map-container-5" style="height: 300px">
+                    <!--<iframe src="https://www.google.com/search?rlz=1C1CHZN_enUS931US931&sxsrf=ALeKk00wBll4X3JGkqryDQF-ylBE3rbuGA%3A1610075911776&ei=B8_3X5rrLom_tQa0ibXYCg&q=googlemaps+Florida&oq=googlemaps+Florida&gs_lcp=CgZwc3ktYWIQAzIKCAAQsQMQyQMQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjoECAAQRzoHCAAQyQMQCjoECC4QCjoHCAAQsQMQClDFH1inLmDhL2gAcAF4AIABsAWIAagOkgELMC4zLjIuMS4wLjGYAQCgAQGqAQdnd3Mtd2l6yAEIwAEB&sclient=psy-ab&ved=0ahUKEwjaiqGWsIvuAhWJX80KHbREDasQ4dUDCA0&uact=5#" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                </div>
             </div>
         </div>
+        <div class="card cardsContact">
+            <h3 class="card-header bg-info text-white">Bussiness Hours</h3>
+            <div class="card-body">
+                <ul class=" card-text list-unstyled">
+                    <li class="listItem">Monday: 7am - 5pm</li>
+                    <li class="listItem">Tuesday: 10am - 7pm</li>
+                    <li class="listItem">Wednesday: 10am - 7pm</li>
+                    <li class="listItem">Thursday: 9am - 6pm</li>
+                    <li>Friday: 8am - 4pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card cardsContact">
+            <h3 class="card-header bg-info text-white">Outside</h3>
+            <div class="card-body">
+                <img class="card-img-top d-flex" src="img/office-outside.jfif" alt="Outside of the office"/>
+                <p>Plenty of parking available on site.</p>
+            </div>
+        </div>
+    </div>
 
+    
+    <div class="container bottomLogos">
         <div class="row row-content">
             <div class="col-12">
-                <h2>Send us your Feedback</h2>
+                <h2 class="text-info">Send us your Feedback</h2>
                 <hr />
             </div>
             <div class="col-md-10">
                 <form>
-                    <div class="form-group row">     <!--By adding a row inside of a column we are creating a nested grid. This will let us position each input field in a separate horizontal row. The form-group class helps with the horizontal alignmentof the components of a form.They are added in the div with class="row"-->
-                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>     <!--Now we can divide the columns in our rows in the nested grid. The <label> tag can hold the class="col-md-2", however the input tags can't, so we need to surround the input tags in divs which will hold the col classes.The col-form-label is added to most label tags to center their content vertically with their associated input tags-->
+                    <div class="form-group row">     
+                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>     
                         <div class="col-md-10">
-                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />     <!--form-control class is added to the input fields to style them. It adds padding and alows us to add addl classes if needed-->
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />     
                         </div>
                     </div>
                     <div class="form-group row">
@@ -117,9 +150,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col offset-md-2">     <!--The offset class here will move this content 2 columns to the right on screens md and up-->
+                        <div class="col offset-md-2">     
                             May we contact you?
-                            <div class="form-check form-check-inline">      <!--We are surrounding the radio buttons with a div with class="form-check". This class works on radio buttons and on checkboxes aswell. It improves their layout and behavior. The form-check-inline is added to both radio buttons if we want them to appear on one line-->
+                            <div class="form-check form-check-inline">      
                                 <input type="radio" class="form-check-input" id="contactYes" name="contactRadios" value="yes" />
                                 <label for="contactYes" class="form-check-label">Yes</label>
                             </div>
@@ -143,41 +176,111 @@
                 </form>
             </div>
        </div>
-
     </div>
-</div>
 
+    <div id="appointmentModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Request Appointment</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-group row"> 
+                                <label for="firstName1" class="col-md-2 col-form-label">First Name</label> 
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="firstName1" name="firstName" placeholder="First Name" /> 
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lastName1" class="col-md-2 col-form-label">Last Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="lastName1" name="lastName" placeholder="Last Name" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="areaCode1" class="col-md-2 col-form-label">Contact Tel.</label>
+                                <div class="col-5 col-md-3">
+                                    <input type="tel" class="form-control" id="areaCode1" name="areaCode" placeholder="Area code" />
+                                </div>
+                                <div class="col-7">
+                                    <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email1" class="col-md-2 col-form-label">Email</label>
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" id="email1" name="email" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="apptType" class="col-md-2 col-form-label">Type of appointment</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" id="apptType" name="feedback" rows="8" placeholder="Describe briefly: toothache, checkup and cleaning etc."></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="offset-md-2 col-md-10">
+                                    <button type="submit" class="btn btn-info">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-2 offset-1">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Sites</a></li>
-                        <li><a href="#">Contact</a></li>
+        <div class = "card-deck container-fluid">
+            <div class="card bg-secondary text-white">
+                <div class="card-body">
+                    <h3 class="card-title footerHeadings">Bussines Hours</h3>
+                    <ul class=" card-text list-unstyled">
+                        <li class="listItem">Monday: 7am - 5pm</li>
+                        <li class="listItem">Tuesday: 10am - 7pm</li>
+                        <li class="listItem">Wednesday: 10am - 7pm</li>
+                        <li class="listItem">Thursday: 9am - 6pm</li>
+                        <li>Friday: 8am - 4pm</li>
                     </ul>
                 </div>
-                <div class="col-6 col-sm-5 text-center">
-                    <h5>Social</h5>
-                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>    <!--the btn classes implemented here are from the bootstrap-social that we installed and they will turn the font awesome icons into clickable link buttons-->
+            </div>
+            <div class = "card bg-secondary text-white">
+                <div class = "card-body">
+                    <h3 class="card-title footerHeadings">Contact</h3>
+                    <address>
+                        123 Sunny Blvd<br/>
+                        Sunny Place, FL 12345
+                    </address>
+                    <i class="fa fa-phone fa-lg text-white"> 1-206-555-1234</i>
+                    <a role="button" class="btn btn-link text-white" href="none@none.com"><i class="fa fa-envelope fa-lg text-white"></i> none@none.com</a>
+                    <h3 id="social" class="footerHeadings">Social</h3>
                     <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>            <!--here instead of using btn-youtube, btn-google was used-->
+                    <a class="btn btn-social-icon btn-yelp" href="http://yelp.com/"><i class="fa fa-yelp"></i></a>
                 </div>
-                <div class="col-sm-4 text-center">
-                    <a role="button" class="btn btn-link" href="tel: +12065551234"><i class="fa fa-phone fa-lg text-primary"></i> 1-206-555-1234</a><br />
-                    <a role="button" class="btn btn-link" href="mailto:campsite@nucamp.co"><i class="fa fa-envelope-o fa-lg text-primary"></i> campsites@nucamp.co</a>
+            </div>
+            <div class = "card bg-secondary text-white">
+                <div class = "card-body">
+                    <h3 class="card-title footerHeadings">Join Our Team</h3>
+                    <p>Enjoy a rewarding career and great benefits.</p>
+                    <p>Email us your resume at: </p>
+                    <a role="button" class="btn btn-link text-white" href="none@none.com"><i class="fa fa-envelope fa-lg text-white"></i> none@none.com</a>
                 </div>
-           </div>
+            </div>
         </div>
     </footer>
 
+
+    
+
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <!-- build:js js/main.js -->
+     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="js/scripts.js"></script>
+     <!-- endbuild -->
 
 </body>
 

@@ -1,0 +1,135 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Lobster", cursive;
+}
+
+h2 {
+    color: #3046c5;
+}
+
+header h2 {
+    color: #4d9fa5;
+}
+
+.site-footer {
+    background-image: linear-gradient(#338b0a, white);
+    padding: 20px 0;
+}
+
+.jumbotron {
+    margin: 0;      /*margin is set to 0 otherwise we have space between our header and the navbar menu*/
+    padding: 30px;
+    background-image: linear-gradient(to right, #f5f0af, #f9fcf9, #b2f3f0);
+    color: white;
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.navbar {
+    background-color: #338b0a;
+}
+.centerHeading {
+    text-align: center;
+    color:#4c96d7;
+}
+  #toothbrushBackground {
+    background-repeat: no-repeat; 
+    background-size:cover; 
+    margin:0%; 
+    min-height: 650px; 
+    background-position: center;
+  }
+  #txtOnBackground {
+    color: #3046c5; 
+    font-size: 2.5rem;
+    position: absolute;
+    top: 30px;
+    right: 16px;
+  }
+  #beforeCarousel {
+    color: #4d9fa5; 
+    font-size: 1.5rem; 
+    padding-top: 7px; 
+    padding-bottom: 1px; 
+    background-color: #f5f0af; 
+    text-align: center; 
+  }
+  .apptTeam {
+    color: #4d9fa5; 
+    font-size: 1.5rem; 
+    padding-top: 7px; 
+    padding-bottom: 7px; 
+    background-color: #f5f0af; 
+    text-align: center;
+
+  }
+  .bottomLogos {
+    background-color: #f5f0af;
+  }
+  .footerHeadings {
+    text-decoration: underline;
+  }
+  #social {
+    padding-top: 20px;
+  }
+  .listItem {
+    padding-bottom: 10px;
+  }
+  .fontP {
+    font-size: 1.5rem;
+  }
+  .ovals {
+    background-color: #f5f0af;
+     border-radius: 40%; 
+     width: 90px; 
+     height: 150px;
+  }
+  #careCreditLogo {
+    padding-left: 15px;
+     width: 100px;
+  }
+  .insBackgr {
+    background-color: #b2f3f0;
+  }
+  .cardsContact {
+    background-color: #d5fcdd;
+  }
+  #carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+  /*To make the carousel controls appear outside of the images and give them color*/
+  .carousel-control-prev, .carousel-control-next {
+    position: inherit;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    background-image: none;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: rgb(104, 224, 240);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: rgb(104, 224, 240);
+}
+
+  
+  

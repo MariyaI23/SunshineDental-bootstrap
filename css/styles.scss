@@ -1,0 +1,150 @@
+$color-textJumbotron: #ffffff;
+$color-midGradient: #f9fcf9;
+$color-text: #4d9fa5;
+$color-text2: #3046c5;
+$color-bckgr: #f5f0af;
+$color-navbar1: #338b0a;
+$color-centerHeading: #4c96d7;
+$color-insBackgr: #b2f3f0;
+$color-cardsContact: #d5fcdd;
+$color-carouselControls: #68e0f0;
+
+$body-font: "Open Sans", "sans-serif";
+$header-font: "Lobster", cursive;
+
+
+
+
+body {
+   font-family: $body-font;  
+}
+
+h1, h2, h3 {
+    font-family: $header-font;
+}
+
+h2 {
+    color: $color-text2;  
+}
+
+header {  
+    h2 {
+        color: $color-text; 
+    }
+}
+
+.site-footer {
+    background-image: linear-gradient($color-navbar1, $color-textJumbotron);
+    padding: 20px 0;
+}
+
+.jumbotron {
+    margin: 0;      /*margin is set to 0 otherwise we have space between our header and the navbar menu*/
+    padding: 30px;
+    background-image: linear-gradient(to right, $color-bckgr, $color-midGradient, $color-insBackgr);
+    color: $color-textJumbotron;
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.navbar {
+    background-color: $color-navbar1;
+}
+.centerHeading {
+    text-align: center;
+    color: $color-centerHeading;
+}
+  #toothbrushBackground {
+    background-repeat: no-repeat; 
+    background-size:cover; 
+    margin:0%; 
+    min-height: 650px; 
+    background-position: center;
+  }
+  #txtOnBackground {
+    color: $color-text2; 
+    font-size: 2.5rem;
+    position: absolute;
+    top: 30px;
+    right: 16px;
+  }
+  #beforeCarousel {
+    color: $color-text; 
+    font-size: 1.5rem; 
+    padding-top: 7px; 
+    padding-bottom: 1px; 
+    background-color: $color-bckgr; 
+    text-align: center; 
+  }
+  .apptTeam {
+    color: $color-text; 
+    font-size: 1.5rem; 
+    padding-top: 7px; 
+    padding-bottom: 7px; 
+    background-color: $color-bckgr; 
+    text-align: center;
+
+  }
+  .bottomLogos {
+    background-color: $color-bckgr;
+  }
+  .footerHeadings {
+    text-decoration: underline;
+  }
+  #social {
+    padding-top: 20px;
+  }
+  .listItem {
+    padding-bottom: 10px;
+  }
+  .fontP {
+    font-size: 1.5rem;
+  }
+  .ovals {
+    background-color: $color-bckgr;
+     border-radius: 40%; 
+     width: 90px; 
+     height: 150px;
+  }
+  #careCreditLogo {
+    padding-left: 15px;
+     width: 100px;
+  }
+  .insBackgr {
+    background-color: $color-insBackgr;
+  }
+  .cardsContact {
+    background-color: $color-cardsContact;
+  }
+  #carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+  /*To make the carousel controls appear outside of the images and give them color*/
+  .carousel-control-prev, .carousel-control-next {
+    position: inherit;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    background-size: 100%, 100%;
+    background-image: none;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: $color-carouselControls;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: $color-carouselControls;
+}
