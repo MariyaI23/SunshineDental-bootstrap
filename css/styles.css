@@ -119,3 +119,10 @@ header h2 {
   content: '<';
   font-size: 55px;
   color: #68e0f0; }
+
+  label, .label {
+    color:  #4c96d7;
+  }
+.radius {
+  border-radius: 4px;
+}
