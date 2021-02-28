@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <!-- endbuild -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 
     <title>Sunshine Dental</title>
@@ -24,12 +26,12 @@
 
             <div class="row">
                 <div class="col text-center text-sm-left">
-                    <a role="button" class="btn  btn-link btn-info text-white" href="tel: +12065551234"><i class="fa fa-phone fa-lg text-white"></i> 1-206-555-1234</a> 
+                    <a role="button" class="btn  btn-link btn-info text-white slideRight" href="tel: +12065551234"><i class="fa fa-phone fa-lg text-white"></i> 1-206-555-1234</a> 
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <a href="#"><img src="img/dentallogo-02.png" class="mx-auto d-block" style="width: 200px"/></a>
+                    <a href="#"><img src="img/dentallogo-02.png" class="mx-auto d-block scaled" style="width: 200px"/></a>
                 </div>
             </div>
             <div class="row">
@@ -42,7 +44,7 @@
                 <div class="row">
                     <div class="col centerHeading">
                         <span class="navbar-text">
-                            <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#appointmentModal">
+                            <a role="button" class="btn btn-lg btn-info animate__animated animate__pulse" data-toggle="modal" data-target="#appointmentModal">
                                 REQUEST APPOINTMENT
                             </a>
                         </span>
@@ -131,8 +133,8 @@
     <!--Setting up background image with message-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col px-0 d-flex align-items-end justify-content-center" id="toothbrushBackground" style="background-image: url('img/toothbrushes.jpg');">
-                    <h2 id="txtOnBackground">A better life. A beautiful smile.</h2>
+            <div class="col px-0 d-flex align-items-end justify-content-center easeIn" id="toothbrushBackground" style="background-image: url('img/toothbrushes.jpg');">
+                    <h2  class="slideLeft" id="txtOnBackground">A better life. A beautiful smile.</h2>
             </div>
         </div>
     </div>
@@ -188,7 +190,7 @@
 
         <!--Card deck-doctors-->
         <div class="card-deck container-fluid">
-            <div class="card">
+            <div class="card leftDr">
                 <h3 class="card-header bg-info text-white">Dr Jane Doe</h3>
                 <div class="card-body">
                     <img class="card-img-top d-flex" src="img/New-Female-Dentist.jpg" alt="Dr Jane Doe"/>
@@ -196,7 +198,7 @@
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam phasellus vestibulum lorem sed. Massa tempor nec feugiat nisl pretium fusce id velit. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. In arcu cursus euismod quis viverra nibh. Sit amet justo donec enim diam.</p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card rightDr">
                 <h3 class="card-header bg-info text-white">Dr John Doe</h3>
                 <div class="card-body">
                     <img class="card-img-top d-flex" src="img/New-Male-Dentist.jpg" alt="Dr John Doe"/>
@@ -208,7 +210,7 @@
 
      <!--Logos and links to  the Services page-->
     <div class="container-fluid bottomLogos">
-       <div class="row row-content align-items-center">
+       <div class="row row-content align-items-center topSlide">
            <div class="col-sm-4 text-center">
                <img src="img/General-Dentistry-logo.png" alt="General Dentistry"/><br/>
                <a class="btn btn-lg btn-info" href="services.html">General Dentistry</a>
@@ -226,7 +228,7 @@
     </div>
 
     <footer class="site-footer">
-        <div class = "card-deck container-fluid">
+        <div class = "card-deck container-fluid footerCards">
             <div class="card bg-secondary text-white">
                 <div class="card-body">
                     <h3 class="card-title footerHeadings">Bussines Hours</h3>
@@ -270,6 +272,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <!-- endbuild -->
+
 </body>
 
 </html>
