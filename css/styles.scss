@@ -12,45 +12,35 @@ $color-carouselControls: #68e0f0;
 $body-font: "Open Sans", "sans-serif";
 $header-font: "Lobster", cursive;
 
-
-
-
 body {
    font-family: $body-font;  
 }
-
 h1, h2, h3 {
     font-family: $header-font;
 }
-
 h2 {
     color: $color-text2;  
 }
-
 header {  
     h2 {
         color: $color-text; 
     }
 }
-
 .site-footer {
     background-image: linear-gradient($color-navbar1, $color-textJumbotron);
     padding: 20px 0;
 }
-
 .jumbotron {
-    margin: 0;      /*margin is set to 0 otherwise we have space between our header and the navbar menu*/
+    margin: 0;      /*margin is set to 0 to eliminate space between header and the navbar menu*/
     padding: 30px;
     background-image: linear-gradient(to right, $color-bckgr, $color-midGradient, $color-insBackgr);
     color: $color-textJumbotron;
 }
-
 .row-content {
     padding: 50px 0;
     border-bottom: 1px ridge;
     min-height: 200px;
 }
-
 .navbar {
     background-color: $color-navbar1;
 }
@@ -87,7 +77,6 @@ header {
     padding-bottom: 7px; 
     background-color: $color-bckgr; 
     text-align: center;
-
   }
   .bottomLogos {
     background-color: $color-bckgr;
@@ -143,20 +132,20 @@ header {
   font-size: 55px;
   color: $color-carouselControls;
 }
-
 .carousel-control-prev-icon:after {
   content: '<';
   font-size: 55px;
   color: $color-carouselControls;
 }
-
 .nav-tabs > li > a:hover {
   border: 3px solid black;
 }
 .nav-tabs >li > a {
   margin: 1px;
 }
-
 .services {
   margin-top: 30px;
+}
+.tab-pane img {
+  padding-right: 20px;
 }

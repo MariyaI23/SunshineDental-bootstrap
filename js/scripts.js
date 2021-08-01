@@ -12,8 +12,7 @@ $(function() {
         }
     });
 });
- 
-//The following is for adding different kinds of animations for the home page
+//Animations
 window.sr = ScrollReveal();
 sr.reveal(".leftDr", {
 duration: 2000,
