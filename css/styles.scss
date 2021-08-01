@@ -99,7 +99,8 @@ header {
     padding-top: 20px;
   }
   .listItem {
-    padding-bottom: 10px;
+    padding: 20px;
+    font-weight: bold;
   }
   .fontP {
     font-size: 1.5rem;
@@ -147,4 +148,15 @@ header {
   content: '<';
   font-size: 55px;
   color: $color-carouselControls;
+}
+
+.nav-tabs > li > a:hover {
+  border: 3px solid black;
+}
+.nav-tabs >li > a {
+  margin: 1px;
+}
+
+.services {
+  margin-top: 30px;
 }

@@ -36,6 +36,11 @@ sr.reveal(".slideLeft", {
     origin: "right",
     distance: "100px"
 });
+sr.reveal(".slideLeftTeamDr", {
+  duration: 2000,
+  origin: "right",
+  distance: "100px",
+});
 sr.reveal(".slideRight", {
     duration: 2000,
     origin: "left",
